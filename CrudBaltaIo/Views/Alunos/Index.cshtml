@@ -1,0 +1,66 @@
+﻿@model IEnumerable<CrudBaltaIo.Entities.Aluno>
+
+@{
+    ViewData["Title"] = "Listagem de Alunos";
+}
+
+<h1>Listagem de Alunos</h1>
+
+<p>
+    <a class="btn btn-outline-primary" asp-action="Create">Novo Cadastro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="table-dark">
+
+            <td>
+                @Html.DisplayNameFor(model => model.Id)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.NomeCompleto)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.CpfAluno)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.DataNascimento)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </td>
+            <td>
+                @Html.DisplayName("Ações")
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+
+    
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeCompleto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CpfAluno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNascimento, "{0:dd/MM/yyyy}", new { @class = "form-control"})
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+
+                <td class="text-left">
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil-alt"></span></a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

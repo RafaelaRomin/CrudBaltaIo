@@ -1,0 +1,48 @@
+﻿@model CrudBaltaIo.Entities.Assinatura
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes da Assinatura</h1>
+
+<div>
+    <h4>Assinatura</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdAluno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdAluno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataCriacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataCriacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Inicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Inicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Termino)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Termino)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Expirada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Expirada)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class ="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> 
+    <a class="btn btn-primary" asp-action="Index">Voltar</a>
+</div>

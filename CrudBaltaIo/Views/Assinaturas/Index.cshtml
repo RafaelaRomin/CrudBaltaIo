@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CrudBaltaIo.Entities.Assinatura>
+
+@{
+    ViewData["Title"] = "Assinaturas";
+}
+
+<h1>Assinaturas do Aluno</h1>
+
+<p>
+    <a class="btn btn-outline-primary" asp-action="Create">Nova Assinatura</a>
+</p>
+<table class="table">
+    <thead>
+        <tr class="table-dark">
+            <td>
+                @Html.DisplayNameFor(model => model.IdAluno)
+            </td>
+
+            <td>
+                @Html.DisplayNameFor(model => model.DataCriacao)
+            </td>
+                
+            <td>
+                @Html.DisplayNameFor(model => model.Inicio)
+            </td>
+
+            <td>
+                @Html.DisplayNameFor(model => model.Termino)
+            </td>
+                
+            <td>
+                @Html.DisplayNameFor(model => model.Expirada)
+            </td>
+            <td>
+                @Html.DisplayName("Ações")
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+       
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdAluno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCriacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Termino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expirada)
+            </td>
+
+            <td class="text-left">
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id"><span class="fa fa-search"></span></a>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id"><span class="fa fa-pencil-alt"></span></a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id"><span class="fa fa-trash"></span></a>
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
