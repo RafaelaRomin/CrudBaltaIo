@@ -6,14 +6,15 @@ Entity Framework, SQLite, ASP.NET Identity para autenticação e Bootstrap como 
 
 O objetivo deste projeto é criar uma plataforma onde os alunos possam se cadastrar e gerenciar suas assinaturas. Os alunos têm a capacidade de se cadastrar na plataforma e ter uma ou várias assinaturas associadas às suas contas, mas apenas uma assinatura ativa naquele momento atual.
 
-Funcionalidades
+#### Funcionalidades
+
 Cadastro de Alunos: Os alunos podem se cadastrar na plataforma fornecendo informações como nome, e-mail e senha.
+
 Autenticação e Autorização: O sistema utiliza ASP.NET Identity para permitir que os alunos façam login de forma segura e acessem apenas as áreas autorizadas.
+
 Gerenciamento de Assinaturas: Os alunos podem gerenciar suas assinaturas. Cada assinatura possui informações como data de início, data de término e status (ativa ou não).
 
-Estrutura do Projeto
-
-O projeto está organizado da seguinte forma:
+#### Estrutura do Projeto:
 
 Controllers: Contém os controladores que definem as ações a serem executadas em resposta às solicitações do usuário.
 
