@@ -24,4 +24,4 @@ O objetivo deste projeto é criar uma plataforma onde os alunos possam se cadast
 
 ![image](https://github.com/RafaelaRomin/CrudBaltaIo/assets/124751861/f5dd3970-a950-46e8-8bd4-a0dc81cbf95e)
 
-Este projeto foi feito para fins didáticos e pode não abranger todos os aspectos de segurança e otimização necessários em uma aplicação de produção real.
+Este projeto foi feito para fins didáticos e como desafio técnico do processo seletivo do BaltaIo, e pode não abranger todos os aspectos de segurança e otimização necessários em uma aplicação de produção real.
